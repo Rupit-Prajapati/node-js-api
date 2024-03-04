@@ -21,9 +21,9 @@ mongoose.connect(uri)
 //   .then(() => console.log('User saved successfully'))
 //   .catch(error => console.error('Error saving user:', error));
 
-User.find().then((data) => console.log('data', data)).catch(error => console.error('Error'));
-app.get('/', (req, res) => {
-  res.send("database")
+app.get('/', async (req, res) => {
+  var data = await User.find()
+  res.send(data)
 });
 
 
