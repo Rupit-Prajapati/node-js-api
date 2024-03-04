@@ -22,8 +22,8 @@ mongoose.connect(uri)
 //   .catch(error => console.error('Error saving user:', error));
 
 app.get('/', async (req, res) => {
-  // var data = await User.find()
-  // res.send(data)
+  var data = await User.find()
+  res.send(data)
 });
 
 
